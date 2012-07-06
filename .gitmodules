@@ -4,3 +4,6 @@
 [submodule "lib/ckeditor"]
 	path = lib/ckeditor
 	url = https://github.com/kenjiru/ckeditor.git
+[submodule "lib/yui3"]
+	path = lib/yui3
+	url = http://github.com/yui/yui3
