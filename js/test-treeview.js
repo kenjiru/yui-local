@@ -1,4 +1,4 @@
-YUI().use('gallery-yui3treeview', function(Y) {
+YUI().use('treeview', function(Y) {
     var treeview = new Y.TreeView({  
          srcNode: '#mytree',
          contentBox: null,
