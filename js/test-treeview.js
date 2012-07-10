@@ -1,6 +1,5 @@
 YUI().use('treeview', function(Y) {
     var treeview = new Y.TreeView({  
-         srcNode: '#mytree',
          contentBox: null,
          type: "TreeView",
          children: [
@@ -22,9 +21,8 @@ YUI().use('treeview', function(Y) {
     treeview.set('label', 'mytree');
     
     treeview.on("treeview:click", function (e){
-        alert(e.target.get("label"));
         console.log(e.target);
-    })
+    });
      
-    treeview.render();
+    treeview.render('#treeHolder');
 });
