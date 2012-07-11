@@ -9,7 +9,7 @@ YUI.add('ckeditor', function(Y) {
 
     Y.extend(CKEditor, Y.Base, {
         initializer : function() {
-            console.log('initializer!');
+            console.log('CKEditor class was initialized!');
         },
         destructor : function() {
 
@@ -17,6 +17,8 @@ YUI.add('ckeditor', function(Y) {
     });
 
     Y.CKEditor = CKEditor;
+
+    console.log('ckeditor module was loaded!');
 }, "0.1", {
     requires : [
         "base"
