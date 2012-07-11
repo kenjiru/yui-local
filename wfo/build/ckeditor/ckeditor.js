@@ -1,36 +1,24 @@
 YUI.add('ckeditor', function(Y) {
-    Y.CKEditor = Y.Base.create("ckeditor", Y.Widget, [], {
-        initializer : function() {
+    function CKEditor() {
+        CKEditor.superclass.constructor.apply(this, arguments);
+    }
 
+    CKEditor.NAME = "ckeditor";
+
+    CKEditor.ATTRS = {};
+
+    Y.extend(CKEditor, Y.Base, {
+        initializer : function() {
+            console.log('initializer!');
         },
         destructor : function() {
 
-        },
-        renderUI : function() {
-            console.log('renderUI');
-        },
-        bindUI : function() {
-
-        },
-        syncUI : function() {
-
-        }
-    }, {
-        NAME : "CKEditor",
-        ATTRS : {
-            title : {
-                value : "Bla"
-            }
-        },
-        HTML_PARSER : {
-            title : function(srcNode) {
-                console.log('Id-ul nodului: ');
-            }
         }
     });
+
+    Y.CKEditor = CKEditor;
 }, "0.1", {
     requires : [
-        "base-build",
-        "widget"
+        "base"
     ]
 });
