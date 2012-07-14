@@ -16,10 +16,22 @@ YUI_config = {
         },
         wfo: {
             base: "wfo/build/",
-            comboBase: "/combo?",
             combine: false,
             modules : {
-                ckeditor : { }
+                wfoeditor : {
+                    requires : [ 'ckeditor' ]
+                }
+            }
+        },
+        // TODO Loading CKEditor does not work
+        ckeditor: {
+            base: "wfo/build/",
+            combine: false,
+            modules : {
+                ckeditor : {
+                    async : true,
+                    fullpath : "lib/ckeditor/ckeditor_source.js"
+                }
             }
         }
     }
