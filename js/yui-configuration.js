@@ -4,7 +4,6 @@ YUI_config = {
     comboBase: "/combo?",
     combine: false,
     groups: {
-        // set up for locally served gallery
         gallery: {
             root: "lib/yui3-gallery/build/",
             comboBase: "/combo?",
@@ -23,13 +22,15 @@ YUI_config = {
                 }
             }
         },
-        // TODO Loading CKEditor does not work
         ckeditor: {
             base: "wfo/build/",
             combine: false,
             modules : {
                 ckeditor : {
-                    async : true,
+                    fullpath : "lib/ckeditor/ckeditor.js"
+                },
+                // TODO Loading CKEditor source is not loaded
+                ckeditor_source : {
                     fullpath : "lib/ckeditor/ckeditor_source.js"
                 }
             }
