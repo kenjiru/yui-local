@@ -25,13 +25,18 @@ YUI.add('wfoeditor', function(Y) {
                 return false;
             }
 
+            config = config || {};
+
             // TODO Check if the element is textarea, div or p
             element = Y.one(element);
-            console.log('Element: ' + element._node);
+            console.log('Element: ' + element.getDOMNode());
+
+            config.autoUpdateElement = false;
+            element.setData('_ckeditorInstanceLock', true);
 
             // TODO Check if CKEditor is already registered for that element
             // Set instance reference in element's data.
-            editor = CKEDITOR.replace(element.getDOMNode(), config);
+            var editor = CKEDITOR.replace(element.getDOMNode(), config);
             element.setData('ckeditorInstance', editor);
         }
     });
