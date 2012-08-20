@@ -45,5 +45,5 @@ YUI.add('wfoeditor', function(Y) {
 
     console.log('wfoeditor YUI3 module was loaded!');
 }, "0.1", {
-    requires : [ "base", "node" ]
+    requires : [ 'base', 'node', 'ckeditor' ]
 });
